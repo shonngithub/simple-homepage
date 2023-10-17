@@ -15,7 +15,7 @@
 #### 特点
 1.支持当前页直接添加,最终数据保存成json到localstorage;
 
-2.可以初始化模板,在静态目录下代理个config.json即可,参考dist下的config.json;
+2.可以初始化模板,把localstorage里编辑好的json复制出来,在静态目录下创建个config.json代理下即可,参考dist下的config.json;
 
 3.加入了农历日期和随机诗句;
 
