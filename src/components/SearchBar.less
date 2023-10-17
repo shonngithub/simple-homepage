@@ -1,0 +1,61 @@
+.bing-search-box {
+  width: 600px;
+  /* 设置搜索框宽度为200px */
+  margin: 0 auto;
+  // padding: 10px;
+  margin-bottom: 70px;
+  // border: 1px solid #ccc;
+  border-radius: 15px;
+  // background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(228, 228, 228, 0.4);
+
+  /* 默认背景色为透明灰色 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  /* 添加过渡效果 */
+
+  .ant-input-affix-wrapper, input{
+    // background-color: rgba(128, 128, 128, 0.2);
+    background: none;
+    border: none!important;
+  }
+  input{
+    height: 40px;
+    font-size: 20px!important;
+    line-height: 40px;
+    color: rgba(28, 28, 30, 0.6);
+  }
+
+}
+
+.bing-search-box.focused {
+  background-color: #f5f5f5;
+  /* 聚焦后背景色改为浅白色 */
+  input{
+    color: rgba(28, 28, 30, 0.8);
+  }
+}
+
+
+
+.bing-search-box input::placeholder {
+  color: #777;
+}
+
+
+.ant-input {
+  border: none;
+  border-radius: 10px;
+}
+
+.ant-input-prefix {
+  margin-right: 20px;
+}
+
+.ant-input-suffix {
+  cursor: pointer;
+}
+
+.ant-input-suffix:hover {
+  color: #1890ff;
+}

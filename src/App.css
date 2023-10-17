@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  font-family: MiniKa, AlibabaPuHuiTi, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: lightslategrey;
+  /* background-image: url("https://cn.bing.com/th?id=OHR.LasLagunas_ZH-CN9917702340_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp");  */
+  /* background-image: url("https://cn.bing.com/th?id=OHR.RebelBase_ZH-CN0484516261_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp");  */
+  background-image: url("https://cn.bing.com/th?id=OHR.SanBlasIslands_ZH-CN6320572106_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp");
+  /* background-image: url("https://cn.bing.com/th?id=OHR.JTNPMilkyWay_ZH-CN9128830420_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp");  */
+
+  /* http://localhost:3000/api/api/randomPhoto/bing?duration=0&t=1691479323334&json=1 */
+  background-position: center center;
+  position: relative;
+}
+
+/* @font-face { */
+  /* font-family: 'AlibabaPuHuiTi'; */
+  /* src: url('https://large-static.wetab.link/font/AlibabaPuHuiTi-2-75-SemiBold.otf') format('opentype'); */
+  /* font-family: 'MiniKa'; */
+  /* src: url('/minika.ttf'); */
+  /* font-weight: 600; */
+  /* font-style: normal; */
+/* } */
+#root::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+.wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  /* height: 20vh; */
+  min-height: 131px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  /* animation: logo-spin infinite 60s linear; */
+}
+
+
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (min-width: 1400px) {
+  .header {
+    margin-bottom: 5vh;
+    margin-top: 10vh;
+  }
+
+  .footer {
+    margin-top: 10vh;
+  }
+}

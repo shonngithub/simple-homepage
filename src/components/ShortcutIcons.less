@@ -1,0 +1,165 @@
+.shortcut-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* 调整图标之间的垂直间隙 */
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2.5vw;
+  /* 调整图标之间的水平间隙 */
+  width: 100%;
+}
+
+.abox {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  /* 调整图标的宽度 */
+  height: 70px;
+  /* 调整图标的高度 */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* 添加浅灰色背景色 */
+  /* border: 1px solid #ddd; */
+  /* 添加浅灰色边框 */
+  border-radius: 20px;
+  /* 添加边框圆角 */
+  transition: transform 0.2s ease;
+  /* 添加动画过渡效果，0.5秒内完成旋转 */
+  position: relative;
+
+  .abox_del{
+    // right: -15px;
+    // top: -10px;
+    bottom: 0;
+    right: 0;
+    // left: 0;
+    // right: 0;
+    // margin: auto;
+    // top: 0;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    svg{
+      color: #FFFFFF;
+      width: 16px;
+    }
+    &:hover{
+      svg{
+        color: #fc473d;
+      }
+    }
+  }
+
+  &:hover{
+    .abox_del{
+      display: block;
+      // top: -18px;
+    }
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      /* 设置蒙层的背景颜色和透明度 */
+      border-radius: 50%;
+      /* 将蒙层设为圆形 */
+      transform: scale(0);
+      /* 初始时将蒙层缩放为0，使其不可见 */
+      transition: transform 0.4s ease;
+      /* 添加动画过渡效果，0.3秒内蒙层逐渐变大 */
+      content: "";
+    }
+  }
+
+  &:hover {
+    // animation: heartbeat 1s infinite;
+    /* 使用 heartbeat 动画 */
+    transform: rotate(360deg);
+
+    /* 鼠标放上时旋转 360 度 */
+    a::before {
+      transform: scale(1.5);
+    }
+
+    a::after {
+      content: var(--code);
+      border-radius: 20px;
+      position: absolute;
+      // line-height: 70px;
+      color: #f5f5f5;
+      // padding-top: 50px;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.abox_name {
+  color: lightgray;
+  display: inline-block;
+  width: 70px;
+  word-break: break-all;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* 添加默认图标的样式 */
+.default-icon {
+  color: #aaa;
+  /* 设置图标颜色为深灰色 */
+}
+
+.ant-modal{
+  .ant-input{
+    border-radius: 0;
+    border-bottom: 1px solid rgba(53, 140, 211, 0.5);
+  }
+  .ant-input:focus, .ant-input-focused{
+    box-shadow: none;
+  }
+  // .ant-form-item-control-input{
+    // border-bottom: 1px solid rgba(53, 140, 211, 0.97);
+    // border-radius: 10px;
+  // }
+}
