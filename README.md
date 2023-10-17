@@ -1,8 +1,8 @@
 # simple-homepage
 一个最精简的个人主页/A minimalist personal homepage
 <p align="center">
-      <img src="demo_img/demo1.png" width="65%">
-      <img src="demo_img/demo2.png" width="65%">
+      <img src="demo_img/demo1.png" width="80%">
+      <img src="demo_img/demo2.png" width="80%">
 </p>
 
 ### 说明
